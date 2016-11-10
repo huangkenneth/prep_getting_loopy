@@ -10,23 +10,49 @@ Within the _FOR_ loop, use `console.log` to:
 
 /***bonus:** could you take the code inside of this FOR loop and encapsulate it inside of a function called `printContent` and still achieve the same result? This new function should accept two parameters.*/
 
-var presidents = ["Washington", 'Adams', 'Jefferson', 'Madison', 'Monroe'];
+// var presidents = ["Washington", 'Adams', 'Jefferson', 'Madison', 'Monroe'];
 
-for(var i=0; i<presidents.length; i++){
-	console.log('Value of i is: ' +(i));
-	console.log('Values of Index is: ' +presidents[i]);
-}
-
+// function printContent (array){
+// for(var i=0; i<array.length; i++){
+// 	console.log('Value of i is: ' +(i));
+// 	console.log('Values of Index is: ' +array[i]);
+// 	}
+// }
+// printContent(presidents);
 
 
 /*Declare a variable named `stringOfNumbers` and set it's value to `''` (an empty String).*/
 
 /*Then write a _FOR_ loop that appends a Number value to that string starting from `10` all the way up to and including `20`.*/
 
+var stringOfNumbers = '';
+
+// for(i= 10; i<=20; i++){
+// 	console.log(i);
+// }
+
+for(i=0; i<11; i++){
+	stringOfNumbers += 10+i;
+}
+console.log(stringOfNumbers);
+
+// console.log(stringOfNumbers);
+
 
 
 /***bonus:** could you take the code inside of this _FOR_ loop and encapsulate it inside of a function called `appendToString` and still achieve the same result?*/
 
+// function makeCrazyLongString(string){
+//   var outputString = "";
+//   for(var i =0; i < 100; i++){
+//     outputString = outputString.concat(string);
+//   }
+// }
+// makeCrazyLongString();
+
+// .concat is for strings; exmaple was to send a message
+
+// function amendToString
 
 
 /*## `Add only even numbrs to an array`
@@ -34,7 +60,15 @@ Declare a variable named `evenNumberArray`.
 
 Use a _FOR_ loop to add only even numbers to an Array. Add `50` even numbers to the `evenNumberArray` starting with the value `0`.*/
 
-  
+// var evenNumberArray = [];
+
+// for (i=0; i<51; i++){
+// 	if (i%2===0){
+// 		evenNumberArray.push(i);
+// 		console.log(evenNumberArray);
+// 	}
+// }
+// // console.log(evenNumberArray);
 
 /*## `Accessing only the odd indexes of an Array - 'Not Even Brah'`
 Someone forgot to fill out this array! Oh noes...
@@ -48,7 +82,17 @@ Example result should look like:
 ```javascript
 `[ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]`*/
 
+// var oppsArray = ['turn' , , 'down' , , 'for' , , 'what' ];
 
+// for (i=0; i<oppsArray.length; i++){
+// 	if (i%2!==0){
+// 		oppsArray[i]='nope';
+		
+// 	}
+// }
+// console.log(oppsArray);
+
+// incrementing loop
 
 /*## `Going backwards?!`
 Using a _FOR_ loop, iterate through the Array stored at `oopsArray` **backwards**. `console.log` each value in the Array.
@@ -64,7 +108,9 @@ nope
 turn
 ```*/
 
-
+// for (i=oppsArray.length-1; i>=0; i--){
+// 	console.log(oppsArray[i]);
+// }
 
 
 /*## `isNapTime`
@@ -79,6 +125,22 @@ Declare a function named `nap`. This function takes in a single parameter called
 
 Now, Write a FOR loop that iterates through the `napSchedule` array and runs the function `nap` while passing in the value at the current position of `napSchedule` into the `nap` function.*/
 
+var isNapTime = false;
+var napSchedule = [false, false, true, false, true, true];
+
+function nap(schedule){
+	if (schedule === true){
+		console.log('ZzZzZzZz');
+	}else{
+		console.log("Gotta get to work!");
+		isNapTime = !isNapTime;
+	}
+}
+
+for(i=0;i<napSchedule.length;i++){
+	nap(napSchedule[i]);
+	// console.log(isNapTime);
+}
 
 
 
